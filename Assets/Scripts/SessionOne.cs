@@ -11,9 +11,6 @@ public class SessionOne : SessionScript
     public AudioClip emotionDoYouFeel;
     public AudioClip weRemember;
     
-    void Start(){
-        StartSession();
-    }
    public override void StartSession(){
        StartCoroutine(SessionSequence());
    }
@@ -25,16 +22,22 @@ public class SessionOne : SessionScript
         yield return StartCoroutine(PlayNarration(firstMemoryInNature));
 
         yield return StartCoroutine(WaitForPlayer());
-
-        //react to Loudness
        
         yield return StartCoroutine(PlayNarration(wereYouAChild));
+
+        yield return StartCoroutine(WaitForPlayer());
         
         yield return StartCoroutine(PlayNarration(doYouRemember));
 
+        yield return StartCoroutine(WaitForPlayer());
+
         yield return StartCoroutine(PlayNarration(emotionDoYouFeel));
+        
+        yield return StartCoroutine(WaitForPlayer());
 
         yield return StartCoroutine(PlayNarration(weRemember));
+        
+        yield return StartCoroutine(WaitForPlayer());
     }
 
 
