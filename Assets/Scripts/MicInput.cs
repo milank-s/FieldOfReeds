@@ -1,13 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class MicInput : MonoBehaviour {
-    public static float MicLoudness;
 
+    public Text loudnessReadout;
+    public Text minLoudnessReadout;
+    public Text averageLoudnessReadout;
+    public static float MicLoudness;
+    public static float maxLoudness = 0;
+    public static float minLoudness = 10;
     private string _device;
     float count = 0;
-    float average = 30;
+    float average = 60;
     public static float averageLoudness;
     //mic initialization
     void InitMic(){
@@ -41,23 +46,29 @@ public class MicInput : MonoBehaviour {
         return levelMax;
     }
 
-
-
     void Update()
     {
         // levelMax equals to the highest normalized value power 2, a small number because < 1
         // pass the value to a static var so we can access it from anywhere
         MicLoudness = LevelMax ();
+
+		count++;
         if(count < average){
             averageLoudness += MicLoudness;
         }else{
-
             averageLoudness = averageLoudness + (MicLoudness-averageLoudness)/(average+1);
             if(count == average){
                  averageLoudness /= count;
             }
 
+            if(averageLoudness < minLoudness){
+                minLoudness = averageLoudness;
+            }
         }
+
+        averageLoudnessReadout.text = "Average Loudness = " + averageLoudness.ToString("f4");
+        loudnessReadout.text = "Loudness = " + MicLoudness.ToString("f4");
+        minLoudnessReadout.text = "Min Loudness = " + minLoudness.ToString("f4");
     }
 
     bool _isInitialized;

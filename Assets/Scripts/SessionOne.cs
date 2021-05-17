@@ -24,19 +24,12 @@ public class SessionOne : SessionScript
         
         yield return StartCoroutine(PlayNarration(firstMemoryInNature));
 
-        while(GameManager.i.voiceSource.isPlaying){
-            yield return null;
-        }
+        yield return StartCoroutine(WaitForPlayer());
 
         //react to Loudness
        
-
         yield return StartCoroutine(PlayNarration(wereYouAChild));
-
-        while(GameManager.i.voiceSource.isPlaying){
-            yield return null;
-        }
-
+        
         yield return StartCoroutine(PlayNarration(doYouRemember));
 
         yield return StartCoroutine(PlayNarration(emotionDoYouFeel));

@@ -31,14 +31,41 @@ public class SessionScript : MonoBehaviour
 
         GameManager.i.listeningForPlayer = true;
 
-         while(MicInput.averageLoudness < 0.2f){
+        float minMicVolume = 0;
+        float maxMicVolume = 0;
+        float t =0;
+
+        bool waitingForSpeech = true;
+         while(waitingForSpeech){
+             if(MicInput.averageLoudness > 0.01f){
+                 //lets say we detected speech
+                 waitingForSpeech = false;
+             }
+
             yield return null;
         }
 
-        while(MicInput.averageLoudness > 0.2f){
+        t = 0;
+        while(t < 1){
+            t += Time.deltaTime;
+            if(MicInput.MicLoudness > maxMicVolume){
+                maxMicVolume = MicInput.MicLoudness;
+            }
+            yield return null;
+        }
+    
+        bool playerSpeaking = true;
+        t= 0;
+        while(t < 1){
+            if(MicInput.averageLoudness > 0.01f){
+               t = 0;
+            }else{
+                t += Time.deltaTime;
+            }
 
             yield return null;
         }
+
         GameManager.i.listeningForPlayer = false;
     }
 }

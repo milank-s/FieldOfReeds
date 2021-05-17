@@ -7,13 +7,15 @@ public class PlayerLoudnessIndicator : MonoBehaviour
     public SpriteRenderer sprite;
     void Update()
     {
+        Color c = sprite.color;
+
         if(GameManager.i.listeningForPlayer){
-            Color c = sprite.color;
             c.a = Mathf.Clamp(Mathf.Pow(MicInput.MicLoudness, 0.5f), 0.1f, 1f);
             sprite.color = c;
         }else{
-            Color c = sprite.color;
             c.a = Mathf.Lerp(c.a, 0, Time.deltaTime * 3f);
         }
+        
+        sprite.color = c;
     }
 }
