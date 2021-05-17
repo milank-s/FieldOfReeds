@@ -18,7 +18,6 @@ public class MicInput : MonoBehaviour {
         Microphone.End(_device);
     }
 
-
     public AudioClip _clipRecord;
     int _sampleWindow = 128;
 
