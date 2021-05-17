@@ -26,4 +26,19 @@ public class SessionScript : MonoBehaviour
         }
         GameManager.i.voiceSource.clip= null;
     }
+
+    public IEnumerator WaitForPlayer(){
+
+        GameManager.i.listeningForPlayer = true;
+
+         while(MicInput.averageLoudness < 0.2f){
+            yield return null;
+        }
+
+        while(MicInput.averageLoudness > 0.2f){
+
+            yield return null;
+        }
+        GameManager.i.listeningForPlayer = false;
+    }
 }

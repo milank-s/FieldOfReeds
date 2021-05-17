@@ -6,7 +6,9 @@ public class MicInput : MonoBehaviour {
     public static float MicLoudness;
 
     private string _device;
-
+    float count = 0;
+    float average = 30;
+    public static float averageLoudness;
     //mic initialization
     void InitMic(){
         if(_device == null) _device = Microphone.devices[0];
@@ -46,6 +48,16 @@ public class MicInput : MonoBehaviour {
         // levelMax equals to the highest normalized value power 2, a small number because < 1
         // pass the value to a static var so we can access it from anywhere
         MicLoudness = LevelMax ();
+        if(count < average){
+            averageLoudness += MicLoudness;
+        }else{
+
+            averageLoudness = averageLoudness + (MicLoudness-averageLoudness)/(average+1);
+            if(count == average){
+                 averageLoudness /= count;
+            }
+
+        }
     }
 
     bool _isInitialized;

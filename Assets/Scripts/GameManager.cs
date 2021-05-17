@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager i;
     public AudioSource voiceSource;
-
+    public bool listeningForPlayer;
     void Awake(){
         i = this;
     }

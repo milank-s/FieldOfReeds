@@ -40,7 +40,7 @@ using UnityEngine;
              loudness /= sampleDataLength; //clipLoudness is what you are looking for
          }
      }else{
-         loudness = 0;
+         loudness = Mathf.Lerp(loudness, 0, Time.deltaTime);
      }
      }
  }

@@ -9,7 +9,7 @@ public class LoudnessIndicator : MonoBehaviour
     void Update()
     {
         Color c = sprite.color;
-        c.a = Mathf.Pow(loudness.loudness, 0.25f);
+        c.a = Mathf.Pow(loudness.loudness, 0.5f);
         sprite.color = c;
     }
 }

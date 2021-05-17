@@ -29,9 +29,7 @@ public class SessionOne : SessionScript
         }
 
         //react to Loudness
-        while(MicInput.MicLoudness < 0.5f){
-            yield return null;
-        }
+       
 
         yield return StartCoroutine(PlayNarration(wereYouAChild));
 
