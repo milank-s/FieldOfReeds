@@ -6,7 +6,37 @@ ModelImporter:
   - first:
       74: 4781951162920444690
     second: Armature|ArmatureAction
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blob
+    second: {fileID: 2100000, guid: afe764fe2c912af42a192dd2e044f40f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bubbles
+    second: {fileID: 2100000, guid: 4b8c668891ffd2c47a3a5333702d1800, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: main leaf
+    second: {fileID: 2100000, guid: 801218166b8c81a448964dc74a0a2fce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: outer leaf
+    second: {fileID: 2100000, guid: 3780ad8b2789d5047b068c23dcd60aa9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tiny leaf
+    second: {fileID: 2100000, guid: d20b7d971048b994bb2746fe850326dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vine
+    second: {fileID: 2100000, guid: 5e47dfad71176ad46a296823e546ffee, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

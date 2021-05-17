@@ -6,7 +6,27 @@ ModelImporter:
   - first:
       74: 4781951162920444690
     second: Armature|ArmatureAction
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: face
+    second: {fileID: 2100000, guid: fffb23b2eef09934c95626bff3805b63, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: highlights
+    second: {fileID: 2100000, guid: 8d09fba3c5915484198100a34d8d9bd6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: leaf
+    second: {fileID: 2100000, guid: 6e9b8da8463f67a43ae275176f30c260, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stems
+    second: {fileID: 2100000, guid: 5e8317dbfa4308b4681852d35b301790, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
