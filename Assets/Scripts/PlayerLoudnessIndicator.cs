@@ -7,6 +7,7 @@ public class PlayerLoudnessIndicator : LineReadout
     public SpriteRenderer sprite;
     void Update()
     {
+        SetValue(MicInput.averageLoudness);
         UpdateLine();
         Color c = sprite.color;
 

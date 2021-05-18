@@ -9,9 +9,11 @@ public class LineReadout : MonoBehaviour
     public float magnitude = 0.1f;
     public float frequency = 0.2f;
     public float speed = 1f;
+
+    [HideInInspector]
     public float amplitude;
     public float width;
-    int segments = 10;
+    public int segments = 25;
 
     public void Start(){
         line.positionCount = segments;
@@ -28,9 +30,7 @@ public class LineReadout : MonoBehaviour
             float height = Mathf.PerlinNoise((float)frequency * i + Time.time * speed, 0) * 2;
             height = (height - 0.5f) * magnitude * amplitude;
             Vector3 position = new Vector3(width * normalized, height, 0);
-            line.SetPosition(i, position);
+            line.SetPosition(i, position + transform.position);
         }
-
-        amplitude = Mathf.Lerp(amplitude, 0, Time.deltaTime);
     }
 }

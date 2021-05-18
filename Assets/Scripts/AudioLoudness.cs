@@ -41,7 +41,7 @@ using UnityEngine.Events;
              loudness /= sampleDataLength; //clipLoudness is what you are looking for
          }
      }else{
-         loudness = Mathf.Lerp(loudness, 0, Time.deltaTime);
+         loudness = Mathf.Lerp(loudness, 0, Time.deltaTime * 10);
      }
 
        narrationLoudness = loudness;
