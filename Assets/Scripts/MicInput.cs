@@ -13,7 +13,7 @@ public class MicInput : MonoBehaviour {
     public static float minLoudness = 10;
     private string _device;
     float count = 0;
-    float average = 60;
+    public float average = 20;
     public static float averageLoudness;
     
     void InitMic(){
@@ -67,8 +67,8 @@ public class MicInput : MonoBehaviour {
             }
         }
 
-        // averageLoudnessReadout.text = "Average Loudness = " + averageLoudness.ToString("f4");
-        // loudnessReadout.text = "Loudness = " + MicLoudness.ToString("f4");
+        loudnessReadout.text = "Loudness: " + MicLoudness.ToString("f4");
+        averageLoudnessReadout.text = "Average: " + averageLoudness.ToString("f4");
         // minLoudnessReadout.text = "Min Loudness = " + minLoudness.ToString("f4");
     }
 
