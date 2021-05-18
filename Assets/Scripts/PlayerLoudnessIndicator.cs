@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerLoudnessIndicator : MonoBehaviour
+public class PlayerLoudnessIndicator : LineReadout
 {
     public SpriteRenderer sprite;
     void Update()
     {
+        UpdateLine();
         Color c = sprite.color;
 
         if(GameManager.i.listeningForPlayer){

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine;
+using UnityEngine.Events;
  
  public class AudioLoudness : MonoBehaviour {
  
@@ -11,6 +11,7 @@ using UnityEngine;
  
      private float currentUpdateTime = 0f;
  
+    public static float narrationLoudness;
      public float loudness;
      private float[] clipSampleData;
  
@@ -42,5 +43,8 @@ using UnityEngine;
      }else{
          loudness = Mathf.Lerp(loudness, 0, Time.deltaTime);
      }
+
+       narrationLoudness = loudness;
+
      }
  }

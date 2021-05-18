@@ -9,6 +9,7 @@ public class PlantTouchBehaviour : MonoBehaviour
    //give plants boxcolliders....
    //play plant animation
 
+    public ParticleSystem clickFX;
    void Update(){
        TryTouchPlant();
        #if UNITY_EDITOR
@@ -43,6 +44,8 @@ public class PlantTouchBehaviour : MonoBehaviour
                      if(raycastHit.rigidbody != null && raycastHit.rigidbody.tag == "Plant"){
                          Plant plantHit = raycastHit.rigidbody.GetComponent<Plant>();
                          plantHit.OnPlayerTouch();
+                         clickFX.transform.position = raycastHit.point;
+                         clickFX.Emit(10);
                      }
                  }          
              }

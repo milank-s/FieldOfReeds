@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 public class MicInput : MonoBehaviour {
 
     public Text loudnessReadout;
@@ -14,7 +15,7 @@ public class MicInput : MonoBehaviour {
     float count = 0;
     float average = 60;
     public static float averageLoudness;
-    //mic initialization
+    
     void InitMic(){
         if(_device == null) _device = Microphone.devices[0];
         _clipRecord = Microphone.Start(_device, true, 999, 44100);
