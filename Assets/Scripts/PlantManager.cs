@@ -12,12 +12,11 @@ public class PlantManager : MonoBehaviour
         public PlantRegion(ARPlane p){
             plane = p;
             extents = p.extents;
+            plants = new List<Plant>();
         }
     }
     public GameObject[] plantPrefabs;
     public ARPlaneManager planeManager;
-    
-    public List<Plant> plants;
     public Dictionary<ARPlane, PlantRegion> plantRegions;
 
     public void OnPlaneChange(ARPlanesChangedEventArgs context){
@@ -47,8 +46,13 @@ public class PlantManager : MonoBehaviour
                 break;
             }
 
+            r.extents = r.plane.extents;
             SpawnPlant(r, p.center + spawnOffset);
         }
+    }
+
+    void Awake(){
+        plantRegions = new Dictionary<ARPlane, PlantRegion>();
     }
     void Start()
     {

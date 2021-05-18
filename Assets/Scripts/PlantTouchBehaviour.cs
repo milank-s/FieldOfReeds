@@ -11,6 +11,9 @@ public class PlantTouchBehaviour : MonoBehaviour
 
    void Update(){
        TryTouchPlant();
+       #if UNITY_EDITOR
+        TryClickPlant();
+       #endif
    }
    public void TryTouchPlant(){
         for (var i = 0; i < Input.touchCount; i++) {
@@ -28,5 +31,20 @@ public class PlantTouchBehaviour : MonoBehaviour
                  }          
              }
         }
+   }
+
+   public void TryClickPlant(){
+       if (Input.GetMouseButtonDown(0)) {
+                 // Construct a ray from the current touch coordinates
+                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                 RaycastHit raycastHit;
+                 // Create a particle if hit
+                 if (Physics.Raycast(ray, out raycastHit, 100f)){
+                     if(raycastHit.rigidbody != null && raycastHit.rigidbody.tag == "Plant"){
+                         Plant plantHit = raycastHit.rigidbody.GetComponent<Plant>();
+                         plantHit.OnPlayerTouch();
+                     }
+                 }          
+             }
    }
 }
