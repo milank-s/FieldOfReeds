@@ -19,6 +19,7 @@ public class PlantManager : MonoBehaviour
     
     public List<Plant> plants;
     public Dictionary<ARPlane, PlantRegion> plantRegions;
+    
     public void OnPlaneChange(ARPlanesChangedEventArgs context){
         foreach(ARPlane p in context.added){
             InitializePlantRegion(p);
@@ -28,20 +29,11 @@ public class PlantManager : MonoBehaviour
             TryPopulatePlane(plantRegions[p]);
         }
     }
-
-    // public ARPlane GetPlane(ARPlane plane){
-    //     foreach(PlantRegion r in plantRegions){
-    //         if(r.plane == plane){
-    //             return r.plane;
-    //         }
-    //     }
-    //     return null;
-    // }
-
+    
     public void TryPopulatePlane(PlantRegion r){
         ARPlane p = r.plane;
         //new plane is big enough to spawn another plant
-        if(r.plants.Count < 4 && r.plane.extents.magnitude > r.extents.magnitude + 0.2f){
+        if(r.plants.Count < 4 && r.plane.extents.magnitude > r.extents.magnitude + 0.5f){
             Vector3 spawnOffset = Vector3.zero;
             switch(r.plants.Count){
                 case 2:
@@ -72,16 +64,10 @@ public class PlantManager : MonoBehaviour
     public void SpawnPlant(PlantRegion region, Vector3 pos){
         ARPlane plane = region.plane;
         GameObject plantToSpawn = plantPrefabs[Random.Range(0, plantPrefabs.Length)];
-        Vector3 spawnPos = plane.center;
-        Vector3 localSpawnPos = plane.centerInPlaneSpace;
         Quaternion spawnRot = Quaternion.LookRotation(new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)), plane.normal);
          
-        GameObject newPlant = Instantiate(plantToSpawn, spawnPos, spawnRot);
+        GameObject newPlant = Instantiate(plantToSpawn, pos, spawnRot);
         Plant plantScript = newPlant.GetComponent<Plant>();
         region.plants.Add(plantScript);    
-    }
-    void Update()
-    {
-        
     }
 }

@@ -349,6 +349,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2088766405777546159}
+  - component: {fileID: 183628018}
+  - component: {fileID: 183628017}
   m_Layer: 0
   m_Name: pf_CorpseFlower
   m_TagString: Untagged
@@ -363,7 +365,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708862441465807125}
-  m_LocalRotation: {x: -0, y: 0.97378474, z: -0, w: 0.22747153}
+  m_LocalRotation: {x: 0, y: 0.9737838, z: 0, w: 0.22747576}
   m_LocalPosition: {x: -4.32, y: 0, z: 12.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -372,6 +374,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 153.703, z: 0}
+--- !u!114 &183628018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708862441465807125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d9cd09e10475c6499a8a43c15c8000c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plane: {fileID: 0}
+  animator: {fileID: 0}
+--- !u!95 &183628017
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708862441465807125}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b4c1debc205b62b4db2af21d3199b3d5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1870561222013220698
 GameObject:
   m_ObjectHideFlags: 0
