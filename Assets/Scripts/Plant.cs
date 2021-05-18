@@ -10,5 +10,9 @@ public class Plant : MonoBehaviour
     {
         
     }
+
+    public void OnPlayerTouch(){
+        animator.SetTrigger("React");
+    }
     
 }

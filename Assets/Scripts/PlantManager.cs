@@ -19,7 +19,7 @@ public class PlantManager : MonoBehaviour
     
     public List<Plant> plants;
     public Dictionary<ARPlane, PlantRegion> plantRegions;
-    
+
     public void OnPlaneChange(ARPlanesChangedEventArgs context){
         foreach(ARPlane p in context.added){
             InitializePlantRegion(p);

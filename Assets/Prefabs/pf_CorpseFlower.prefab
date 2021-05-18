@@ -353,7 +353,7 @@ GameObject:
   - component: {fileID: 183628017}
   m_Layer: 0
   m_Name: pf_CorpseFlower
-  m_TagString: Untagged
+  m_TagString: Plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -387,7 +387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plane: {fileID: 0}
-  animator: {fileID: 0}
+  animator: {fileID: 183628017}
 --- !u!95 &183628017
 Animator:
   serializedVersion: 3

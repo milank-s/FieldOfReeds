@@ -639,7 +639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plane: {fileID: 0}
-  animator: {fileID: 0}
+  animator: {fileID: 126588349}
 --- !u!95 &126588349
 Animator:
   serializedVersion: 3

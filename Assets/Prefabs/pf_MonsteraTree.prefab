@@ -576,7 +576,7 @@ GameObject:
   - component: {fileID: 1065685084}
   m_Layer: 0
   m_Name: pf_MonsteraTree
-  m_TagString: Untagged
+  m_TagString: Plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -610,7 +610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plane: {fileID: 0}
-  animator: {fileID: 0}
+  animator: {fileID: 1065685084}
 --- !u!95 &1065685084
 Animator:
   serializedVersion: 3

@@ -66,9 +66,9 @@ public class MicInput : MonoBehaviour {
             }
         }
 
-        averageLoudnessReadout.text = "Average Loudness = " + averageLoudness.ToString("f4");
-        loudnessReadout.text = "Loudness = " + MicLoudness.ToString("f4");
-        minLoudnessReadout.text = "Min Loudness = " + minLoudness.ToString("f4");
+        // averageLoudnessReadout.text = "Average Loudness = " + averageLoudness.ToString("f4");
+        // loudnessReadout.text = "Loudness = " + MicLoudness.ToString("f4");
+        // minLoudnessReadout.text = "Min Loudness = " + minLoudness.ToString("f4");
     }
 
     bool _isInitialized;
