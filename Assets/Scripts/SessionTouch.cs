@@ -8,9 +8,17 @@ public class SessionTouch : SessionScript
     public AudioClip currentBuild;
     public AudioClip thankYou;
     
+    bool touched = false;
    public override void StartSession(){
+       PlantManager.i.PlantTouched += PlantTouched;
        StartCoroutine(SessionSequence());
    }
+
+    public override void EndSession()
+    {
+        base.EndSession();
+        PlantManager.i.PlantTouched -= PlantTouched;
+    }
 
     public override IEnumerator SessionSequence()
     {
@@ -18,12 +26,17 @@ public class SessionTouch : SessionScript
         
         yield return StartCoroutine(PlayNarration(currentBuild));
 
-        
+        while(!touched){
+            yield return null;
+        }
         
         yield return StartCoroutine(PlayNarration(thankYou));
         
     }
 
+    public void PlantTouched(){
+        touched = true;
+    }
 
 
    
