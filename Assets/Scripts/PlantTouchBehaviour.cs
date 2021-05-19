@@ -18,8 +18,10 @@ public class PlantTouchBehaviour : MonoBehaviour
    }
    public void TryTouchPlant(){
         for (var i = 0; i < Input.touchCount; i++) {
-             if (Input.GetTouch(i).phase == TouchPhase.Began) {
-                 
+            
+            if (Input.GetTouch(i).phase == TouchPhase.Began) { 
+                //anything special we want to do on touch?
+            }
                  // Construct a ray from the current touch coordinates
                  Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(i).position);
                  RaycastHit raycastHit;
@@ -30,7 +32,7 @@ public class PlantTouchBehaviour : MonoBehaviour
                          plantHit.OnPlayerTouch();
                      }
                  }          
-             }
+             
         }
    }
 

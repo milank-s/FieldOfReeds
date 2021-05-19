@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SessionScript : MonoBehaviour
 {
+
+    public Plant.DesiredInput inputType;
     public virtual void StartSession(){
 
     }

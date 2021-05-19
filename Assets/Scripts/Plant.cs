@@ -13,6 +13,7 @@ public class Plant : MonoBehaviour
     void Start()    
     {
         MicInput.i.OnPlayerSpeak += OnMicInput;
+        desiredInput = GameManager.i.currentSession.inputType;
     }
 
     void Update(){
