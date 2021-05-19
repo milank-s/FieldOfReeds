@@ -5,6 +5,7 @@ using UnityEngine;
 public class SessionSpeech : SessionScript
 {
 
+    public SessionScript touchSequence;
     public AudioClip firstMemoryInNature;
     public AudioClip wereYouAChild;
     public AudioClip doYouRemember;
@@ -36,9 +37,9 @@ public class SessionSpeech : SessionScript
         yield return StartCoroutine(WaitForPlayer());
 
         
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
 
-        PlantManager.i.SetPlantInput(Plant.DesiredInput.touch);
+        touchSequence.StartSession();
     }
 
 

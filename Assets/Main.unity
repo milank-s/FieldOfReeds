@@ -2213,7 +2213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   voiceSource: {fileID: 1239512682}
-  currentSession: {fileID: 5872018568236401800}
+  currentSession: {fileID: 7419008193569485756}
   title: {fileID: 97790584}
   gameStarted: 0
   listeningForPlayer: 0
@@ -7455,6 +7455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputType: 1
+  touchSequence: {fileID: 7419008193569485756}
   firstMemoryInNature: {fileID: 8300000, guid: f787f2d151b6c5a448d826d76641158f, type: 3}
   wereYouAChild: {fileID: 8300000, guid: cee54436dddcb5444ba6d5cc8acee8a3, type: 3}
   doYouRemember: {fileID: 8300000, guid: cee54436dddcb5444ba6d5cc8acee8a3, type: 3}
@@ -7535,8 +7536,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputType: 0
-  firstMemoryInNature: {fileID: 0}
-  wereYouAChild: {fileID: 0}
-  doYouRemember: {fileID: 0}
-  emotionDoYouFeel: {fileID: 0}
-  weRemember: {fileID: 0}
+  currentBuild: {fileID: 8300000, guid: 8040b3b26e9be854498c765af24ce890, type: 3}
+  thankYou: {fileID: 8300000, guid: 1763de78af9c131458ef4d53d6f3e0b2, type: 3}

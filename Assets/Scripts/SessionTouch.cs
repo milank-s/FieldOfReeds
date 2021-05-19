@@ -11,6 +11,7 @@ public class SessionTouch : SessionScript
     bool touched = false;
    public override void StartSession(){
        PlantManager.i.PlantTouched += PlantTouched;
+       PlantManager.i.SetPlantInput(Plant.DesiredInput.touch);
        StartCoroutine(SessionSequence());
    }
 
@@ -29,6 +30,8 @@ public class SessionTouch : SessionScript
         while(!touched){
             yield return null;
         }
+        
+        yield return new WaitForSeconds(2f);
         
         yield return StartCoroutine(PlayNarration(thankYou));
         
