@@ -1331,6 +1331,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: SessionOne
       objectReference: {fileID: 0}
+    - target: {fileID: 5872018568648729906, guid: 319db6b8d74f71e4b842be8e8756917e,
+        type: 3}
+      propertyPath: firstMemoryInNature
+      value: 
+      objectReference: {fileID: 8300000, guid: f787f2d151b6c5a448d826d76641158f, type: 3}
+    - target: {fileID: 5872018568648729906, guid: 319db6b8d74f71e4b842be8e8756917e,
+        type: 3}
+      propertyPath: wereYouAChild
+      value: 
+      objectReference: {fileID: 8300000, guid: cee54436dddcb5444ba6d5cc8acee8a3, type: 3}
+    - target: {fileID: 5872018568648729906, guid: 319db6b8d74f71e4b842be8e8756917e,
+        type: 3}
+      propertyPath: doYouRemember
+      value: 
+      objectReference: {fileID: 8300000, guid: fdfa9594a5c9a654c8e6a79fddb21490, type: 3}
+    - target: {fileID: 5872018568648729906, guid: 319db6b8d74f71e4b842be8e8756917e,
+        type: 3}
+      propertyPath: emotionDoYouFeel
+      value: 
+      objectReference: {fileID: 8300000, guid: b39cd7dfff362ea42974cd635845a8fd, type: 3}
     - target: {fileID: 5872018568648729907, guid: 319db6b8d74f71e4b842be8e8756917e,
         type: 3}
       propertyPath: m_LocalPosition.x
