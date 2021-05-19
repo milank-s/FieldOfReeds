@@ -13,18 +13,17 @@ public class AnimationPlayback : MonoBehaviour
     }
     
     public void MovePlayhead(){
-        playbackTime += Time.deltaTime;
         
-        SetPlayhead(GetAnimationName(), playbackTime);
-
+        playbackTime += Time.deltaTime;
         if(playbackTime > 1){
             playbackTime = 0;
         }
     }
-     void SetPlayhead(string name, float t)
-     {
-         anim.Play (name, 0, t);
-     }
+    public void SetPlayhead(){
+        
+        anim.Play (GetAnimationName(), 0, playbackTime);
+
+    }
  
      string GetAnimationName()
      {

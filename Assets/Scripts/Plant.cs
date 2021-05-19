@@ -8,10 +8,13 @@ public class Plant : MonoBehaviour
    public enum DesiredInput{touch, mic}
    public DesiredInput desiredInput = DesiredInput.mic;
 
-   public AnimationPlayback animationController;
+   public AnimationPlayback animationPlayback;
    public ARPlane plane;
    public Animator animator;
 
+    void Awake(){
+        animationPlayback = GetComponent<AnimationPlayback>();
+    }
     void Start()    
     {
         MicInput.i.OnPlayerSpeak += OnMicInput;
@@ -19,7 +22,9 @@ public class Plant : MonoBehaviour
     }
 
     void Update(){
-
+        if(desiredInput == DesiredInput.touch){
+            animationPlayback.SetPlayhead();
+        }
     }
 
     public void OnMicInput(){
@@ -35,7 +40,7 @@ public class Plant : MonoBehaviour
     public void OnPlayerTouch(){
         if(desiredInput == DesiredInput.touch){
             animator.SetTrigger("React");
-            animationController.MovePlayhead();
+            animationPlayback.MovePlayhead();
         }
     }
     
