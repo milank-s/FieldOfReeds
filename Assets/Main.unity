@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 10984995}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 5}
+  m_LocalPosition: {x: 0, y: -1.5, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1723936292}
@@ -1195,7 +1195,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 597700241}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.9, z: 5}
+  m_LocalPosition: {x: 0, y: 1.5, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1603171826}
@@ -1297,7 +1297,7 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 0
+  m_UseWorldSpace: 1
   m_Loop: 0
 --- !u!114 &597700244
 MonoBehaviour:
@@ -2337,6 +2337,9 @@ MonoBehaviour:
   - {fileID: 8123633898950432207, guid: af535adad265d064ea647260e65bc30e, type: 3}
   - {fileID: 1651858981517717757, guid: fda65d47b73240b488c3b2384fa94af3, type: 3}
   - {fileID: 6822697963509979187, guid: a37460c96c68d6b4496096c4205d63c8, type: 3}
+  - {fileID: 7292328356901875739, guid: f4c4a184d187cd748aa63a0cc85d80c7, type: 3}
+  - {fileID: 8909864731494144688, guid: 4ce9e5b53f633954a9b415ee60a56278, type: 3}
+  - {fileID: 1708862441465807125, guid: 1c0415361e2542a40a904d3cf27c9965, type: 3}
   planeManager: {fileID: 146482631}
 --- !u!114 &1710424893
 MonoBehaviour:
@@ -2426,7 +2429,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1723936290}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.08, y: 0.25, z: 0}
+  m_LocalPosition: {x: 0, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 10984996}
@@ -7434,7 +7437,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 20
-  field of view: 26.991467
+  field of view: 40
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
