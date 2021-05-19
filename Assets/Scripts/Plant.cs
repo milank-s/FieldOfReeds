@@ -4,15 +4,35 @@ using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 public class Plant : MonoBehaviour
 {
+
+   public enum DesiredInput{touch, mic}
+   public DesiredInput desiredInput = DesiredInput.mic;
    public ARPlane plane;
    public Animator animator;
-    void Start()
+
+    void Start()    
     {
-        
+        MicInput.i.OnPlayerSpeak += OnMicInput;
+    }
+
+    void Update(){
+
+    }
+
+    public void OnMicInput(){
+        if(desiredInput == DesiredInput.mic){
+            animator.SetTrigger("React");
+        }
+    }
+
+    public void LoopAnimation(bool loop){
+        animator.SetBool("Loop", loop);
     }
 
     public void OnPlayerTouch(){
-        animator.SetTrigger("React");
+        if(desiredInput == DesiredInput.touch){
+            animator.SetTrigger("React");
+        }
     }
     
 }

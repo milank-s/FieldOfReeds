@@ -5,6 +5,7 @@ using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARKit;
 public class PlantManager : MonoBehaviour
 {
+    public static PlantManager i;
     public class PlantRegion{
         public ARPlane plane;
         public List<Plant> plants;
@@ -15,6 +16,8 @@ public class PlantManager : MonoBehaviour
             plants = new List<Plant>();
         }
     }
+
+    public List<Plant> plants;
     public GameObject[] plantPrefabs;
     public ARPlaneManager planeManager;
     public Dictionary<ARPlane, PlantRegion> plantRegions;
@@ -52,6 +55,7 @@ public class PlantManager : MonoBehaviour
     }
 
     void Awake(){
+        i = this;
         plantRegions = new Dictionary<ARPlane, PlantRegion>();
     }
     void Start()
@@ -73,5 +77,6 @@ public class PlantManager : MonoBehaviour
         GameObject newPlant = Instantiate(plantToSpawn, pos, spawnRot);
         Plant plantScript = newPlant.GetComponent<Plant>();
         region.plants.Add(plantScript);    
+        plants.Add(plantScript);
     }
 }

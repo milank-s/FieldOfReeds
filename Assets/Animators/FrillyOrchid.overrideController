@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FrillyOrchid
+  m_Controller: {fileID: 9100000, guid: 229c5a07b788db441b3cac924b93a535, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 4781951162920444690, guid: be15793ef1c91764fb60a87a8dfa0469,
+      type: 3}
+    m_OverrideClip: {fileID: 4781951162920444690, guid: edc1f57546c5dca4e8035f0959f32577,
+      type: 3}

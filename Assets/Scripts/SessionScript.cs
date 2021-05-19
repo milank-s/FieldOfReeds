@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SessionScript : MonoBehaviour
 {
-
     public virtual void StartSession(){
 
     }
@@ -16,6 +15,12 @@ public class SessionScript : MonoBehaviour
 
     public virtual void EndSession(){
 
+    }
+
+    public void SetPlantInput(Plant.DesiredInput i){
+        foreach(Plant p in PlantManager.i.plants){
+            p.desiredInput = i;
+        }
     }
 
     public IEnumerator PlayNarration(AudioClip clip){
@@ -31,14 +36,15 @@ public class SessionScript : MonoBehaviour
 
         GameManager.i.listeningForPlayer = true;
 
-        float minMicVolume = 0;
         float maxMicVolume = 0;
         float t =0;
 
         bool waitingForSpeech = true;
          while(waitingForSpeech){
              if(MicInput.averageLoudness > 0.01f){
-                 //lets say we detected speech
+
+                 MicInput.i.PlayerSpoke();
+                 
                  waitingForSpeech = false;
              }
 
@@ -54,7 +60,6 @@ public class SessionScript : MonoBehaviour
             yield return null;
         }
     
-        bool playerSpeaking = true;
         t= 0;
         while(t < 1){
             if(MicInput.averageLoudness > 0.01f){
@@ -68,4 +73,5 @@ public class SessionScript : MonoBehaviour
 
         GameManager.i.listeningForPlayer = false;
     }
+    
 }

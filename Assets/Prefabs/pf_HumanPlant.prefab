@@ -258,6 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d9cd09e10475c6499a8a43c15c8000c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  desiredInput: 1
   plane: {fileID: 0}
   animator: {fileID: 2132147635}
 --- !u!95 &2132147635
@@ -270,7 +271,7 @@ Animator:
   m_GameObject: {fileID: 6822697963509979187}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8b8b75cce142aa24c96561b23a56f3c8, type: 2}
+  m_Controller: {fileID: 22100000, guid: 5d628cd06af35ea4ea0db03855e4a5ba, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

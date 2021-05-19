@@ -640,6 +640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d9cd09e10475c6499a8a43c15c8000c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  desiredInput: 1
   plane: {fileID: 0}
   animator: {fileID: 126588349}
 --- !u!95 &126588349
@@ -652,7 +653,7 @@ Animator:
   m_GameObject: {fileID: 5955719462244028441}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 329792c059aec4649a593b6df9b3cbd5, type: 2}
+  m_Controller: {fileID: 22100000, guid: 96a8993d167e2434b98e03a6d3886406, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

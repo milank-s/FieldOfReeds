@@ -5,6 +5,11 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 public class MicInput : MonoBehaviour {
 
+    public static MicInput i;
+
+    public delegate void SpeechEvent();
+    public SpeechEvent OnPlayerSpeak;
+
     public Text loudnessReadout;
     public Text minLoudnessReadout;
     public Text averageLoudnessReadout;
@@ -16,6 +21,9 @@ public class MicInput : MonoBehaviour {
     public float average = 20;
     public static float averageLoudness;
     
+    void Awake(){
+        i = this;
+    }
     void InitMic(){
         if(_device == null) _device = Microphone.devices[0];
         _clipRecord = Microphone.Start(_device, true, 999, 44100);
@@ -24,6 +32,12 @@ public class MicInput : MonoBehaviour {
     void StopMicrophone()
     {
         Microphone.End(_device);
+    }
+
+    public void PlayerSpoke(){
+        if(OnPlayerSpeak != null){
+            OnPlayerSpeak.Invoke();
+        }
     }
 
     public AudioClip _clipRecord;
