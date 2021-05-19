@@ -5,15 +5,12 @@ using UnityEngine;
 public class AnimationPlayback : MonoBehaviour
 {
          
-     Animator anim;
-    public AnimationPlayback animationController;
-    public bool loopAnimation;
-
+    Animator anim;
     public float playbackTime;
 
-     void Update () {
-        
-     }
+    void Awake(){
+        anim = GetComponent<Animator>();
+    }
     
     public void MovePlayhead(){
         playbackTime += Time.deltaTime;

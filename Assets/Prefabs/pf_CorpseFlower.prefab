@@ -353,6 +353,7 @@ GameObject:
   - component: {fileID: 183628017}
   - component: {fileID: 2783079001381381922}
   - component: {fileID: -4077105407453881580}
+  - component: {fileID: 5592650605375371374}
   m_Layer: 0
   m_Name: pf_CorpseFlower
   m_TagString: Plant
@@ -389,6 +390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredInput: 1
+  animationController: {fileID: 0}
   plane: {fileID: 0}
   animator: {fileID: 183628017}
 --- !u!95 &183628017
@@ -439,6 +441,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5592650605375371374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708862441465807125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c6b28e1d315bcd48adb408f64eb47b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationController: {fileID: 0}
+  loopAnimation: 0
+  playbackTime: 0
 --- !u!1 &1870561222013220698
 GameObject:
   m_ObjectHideFlags: 0

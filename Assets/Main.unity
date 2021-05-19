@@ -1345,12 +1345,22 @@ PrefabInstance:
         type: 3}
       propertyPath: doYouRemember
       value: 
-      objectReference: {fileID: 8300000, guid: fdfa9594a5c9a654c8e6a79fddb21490, type: 3}
+      objectReference: {fileID: 8300000, guid: cee54436dddcb5444ba6d5cc8acee8a3, type: 3}
     - target: {fileID: 5872018568648729906, guid: 319db6b8d74f71e4b842be8e8756917e,
         type: 3}
       propertyPath: emotionDoYouFeel
       value: 
+      objectReference: {fileID: 8300000, guid: fdfa9594a5c9a654c8e6a79fddb21490, type: 3}
+    - target: {fileID: 5872018568648729906, guid: 319db6b8d74f71e4b842be8e8756917e,
+        type: 3}
+      propertyPath: weRemember
+      value: 
       objectReference: {fileID: 8300000, guid: b39cd7dfff362ea42974cd635845a8fd, type: 3}
+    - target: {fileID: 5872018568648729906, guid: 319db6b8d74f71e4b842be8e8756917e,
+        type: 3}
+      propertyPath: inputType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5872018568648729907, guid: 319db6b8d74f71e4b842be8e8756917e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2353,6 +2363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82c336e39f5b37743b1ccdf3dd6e3464, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plants: []
   plantPrefabs:
   - {fileID: 8123633898950432207, guid: af535adad265d064ea647260e65bc30e, type: 3}
   - {fileID: 1651858981517717757, guid: fda65d47b73240b488c3b2384fa94af3, type: 3}

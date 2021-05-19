@@ -7,6 +7,8 @@ public class Plant : MonoBehaviour
 
    public enum DesiredInput{touch, mic}
    public DesiredInput desiredInput = DesiredInput.mic;
+
+   public AnimationPlayback animationController;
    public ARPlane plane;
    public Animator animator;
 
@@ -33,6 +35,7 @@ public class Plant : MonoBehaviour
     public void OnPlayerTouch(){
         if(desiredInput == DesiredInput.touch){
             animator.SetTrigger("React");
+            animationController.MovePlayhead();
         }
     }
     

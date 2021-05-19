@@ -605,6 +605,7 @@ GameObject:
   - component: {fileID: 126588349}
   - component: {fileID: -4348174971882246441}
   - component: {fileID: -4214926035977246970}
+  - component: {fileID: -6490588152270239772}
   m_Layer: 0
   m_Name: pf_TallBulbPlant
   m_TagString: Plant
@@ -641,6 +642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredInput: 1
+  animationController: {fileID: 0}
   plane: {fileID: 0}
   animator: {fileID: 126588349}
 --- !u!95 &126588349
@@ -691,6 +693,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 6, z: 1}
   m_Center: {x: 0, y: 2.5, z: 0}
+--- !u!114 &-6490588152270239772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5955719462244028441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c6b28e1d315bcd48adb408f64eb47b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationController: {fileID: 0}
+  loopAnimation: 0
+  playbackTime: 0
 --- !u!1 &6059084968759678921
 GameObject:
   m_ObjectHideFlags: 0

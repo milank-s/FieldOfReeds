@@ -54,8 +54,15 @@ public class PlantManager : MonoBehaviour
         }
     }
 
+    public void SetPlantInput(Plant.DesiredInput i){
+        foreach(Plant p in plants){
+            p.desiredInput = i;
+        }
+    }
+
     void Awake(){
         i = this;
+        plants = new List<Plant>();
         plantRegions = new Dictionary<ARPlane, PlantRegion>();
     }
     void Start()

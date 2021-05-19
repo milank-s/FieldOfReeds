@@ -19,11 +19,6 @@ public class SessionScript : MonoBehaviour
 
     }
 
-    public void SetPlantInput(Plant.DesiredInput i){
-        foreach(Plant p in PlantManager.i.plants){
-            p.desiredInput = i;
-        }
-    }
 
     public IEnumerator PlayNarration(AudioClip clip){
         GameManager.i.voiceSource.clip = clip;

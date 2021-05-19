@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SessionOne : SessionScript
+public class SessionSpeech : SessionScript
 {
 
     public AudioClip firstMemoryInNature;
@@ -20,11 +20,7 @@ public class SessionOne : SessionScript
         yield return new WaitForSeconds(2f);
         
         yield return StartCoroutine(PlayNarration(firstMemoryInNature));
-
-        yield return StartCoroutine(WaitForPlayer());
-       
-        yield return StartCoroutine(PlayNarration(wereYouAChild));
-
+        
         yield return StartCoroutine(WaitForPlayer());
         
         yield return StartCoroutine(PlayNarration(doYouRemember));
@@ -38,6 +34,8 @@ public class SessionOne : SessionScript
         yield return StartCoroutine(PlayNarration(weRemember));
         
         yield return StartCoroutine(WaitForPlayer());
+
+        PlantManager.i.SetPlantInput(Plant.DesiredInput.touch);
     }
 
 

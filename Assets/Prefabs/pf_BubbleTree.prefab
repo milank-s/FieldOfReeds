@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 919132148855405738}
   - component: {fileID: -8305617945676964607}
   - component: {fileID: -2604661496575566583}
+  - component: {fileID: 3268671677753618866}
   m_Layer: 0
   m_Name: pf_BubbleTree
   m_TagString: Plant
@@ -172,6 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredInput: 1
+  animationController: {fileID: 0}
   plane: {fileID: 0}
   animator: {fileID: 919132148855405738}
 --- !u!95 &919132148855405738
@@ -222,6 +224,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 3, z: 1}
   m_Center: {x: 0, y: 1.5, z: 0}
+--- !u!114 &3268671677753618866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5191180177386561708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c6b28e1d315bcd48adb408f64eb47b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationController: {fileID: 0}
+  loopAnimation: 0
+  playbackTime: 0
 --- !u!1 &6634837852384314791
 GameObject:
   m_ObjectHideFlags: 0
