@@ -14,17 +14,20 @@ public class AnimationPlayback : MonoBehaviour
     
     public void MovePlayhead(){
         
-        playbackTime += Time.deltaTime;
+        playbackTime += Time.deltaTime/GetCurrentClip().length;
+        
         if(playbackTime > 1){
             playbackTime = 0;
         }
     }
     public void SetPlayhead(){
-        
         anim.Play (GetAnimationName(), 0, playbackTime);
 
     }
- 
+    public void LoopAnimation(bool loop){
+        anim.SetBool("Loop", loop);
+    }
+
      string GetAnimationName()
      {
          var currAnimName = "";
@@ -35,6 +38,18 @@ public class AnimationPlayback : MonoBehaviour
          }
  
          return currAnimName;
+     }
+
+     AnimationClip GetCurrentClip()
+     {
+         
+         foreach (AnimationClip clip in anim.runtimeAnimatorController.animationClips) {
+             if (anim.GetCurrentAnimatorStateInfo (0).IsName (clip.name)) {
+                 return clip;
+             }
+         }
+
+         return null;
      }
  
 }

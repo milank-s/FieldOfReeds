@@ -35,6 +35,9 @@ public class SessionSpeech : SessionScript
         
         yield return StartCoroutine(WaitForPlayer());
 
+        
+        yield return new WaitForSeconds(5f);
+
         PlantManager.i.SetPlantInput(Plant.DesiredInput.touch);
     }
 

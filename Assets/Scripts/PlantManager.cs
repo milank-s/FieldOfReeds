@@ -5,6 +5,9 @@ using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARKit;
 public class PlantManager : MonoBehaviour
 {
+
+    public delegate void EventToFire();
+    public EventToFire PlantTouched;
     public static PlantManager i;
     public class PlantRegion{
         public ARPlane plane;

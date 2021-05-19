@@ -5,11 +5,8 @@ using UnityEngine;
 public class SessionTouch : SessionScript
 {
 
-    public AudioClip firstMemoryInNature;
-    public AudioClip wereYouAChild;
-    public AudioClip doYouRemember;
-    public AudioClip emotionDoYouFeel;
-    public AudioClip weRemember;
+    public AudioClip currentBuild;
+    public AudioClip thankYou;
     
    public override void StartSession(){
        StartCoroutine(SessionSequence());
@@ -19,21 +16,12 @@ public class SessionTouch : SessionScript
     {
         yield return new WaitForSeconds(2f);
         
-        yield return StartCoroutine(PlayNarration(firstMemoryInNature));
-        
-        yield return StartCoroutine(WaitForPlayer());
-        
-        yield return StartCoroutine(PlayNarration(doYouRemember));
+        yield return StartCoroutine(PlayNarration(currentBuild));
 
-        yield return StartCoroutine(WaitForPlayer());
-
-        yield return StartCoroutine(PlayNarration(emotionDoYouFeel));
         
-        yield return StartCoroutine(WaitForPlayer());
-
-        yield return StartCoroutine(PlayNarration(weRemember));
         
-        yield return StartCoroutine(WaitForPlayer());
+        yield return StartCoroutine(PlayNarration(thankYou));
+        
     }
 
 

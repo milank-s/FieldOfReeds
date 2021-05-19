@@ -21,6 +21,9 @@ public class PlantTouchBehaviour : MonoBehaviour
             
             if (Input.GetTouch(i).phase == TouchPhase.Began) { 
                 //anything special we want to do on touch?
+                if(PlantManager.i.PlantTouched != null){
+                    PlantManager.i.PlantTouched.Invoke();
+                }
             }
                  // Construct a ray from the current touch coordinates
                  Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(i).position);
@@ -46,6 +49,7 @@ public class PlantTouchBehaviour : MonoBehaviour
                      if(raycastHit.rigidbody != null && raycastHit.rigidbody.tag == "Plant"){
                          Plant plantHit = raycastHit.rigidbody.GetComponent<Plant>();
                          plantHit.OnPlayerTouch();
+                         
                          clickFX.transform.position = raycastHit.point;
                          clickFX.Emit(10);
                      }

@@ -19,11 +19,12 @@ public class Plant : MonoBehaviour
     {
         MicInput.i.OnPlayerSpeak += OnMicInput;
         desiredInput = GameManager.i.currentSession.inputType;
+        
     }
 
     void Update(){
         if(desiredInput == DesiredInput.touch){
-            animationPlayback.SetPlayhead();
+            //animationPlayback.SetPlayhead();
         }
     }
 
@@ -33,14 +34,10 @@ public class Plant : MonoBehaviour
         }
     }
 
-    public void LoopAnimation(bool loop){
-        animator.SetBool("Loop", loop);
-    }
-
     public void OnPlayerTouch(){
         if(desiredInput == DesiredInput.touch){
             animator.SetTrigger("React");
-            animationPlayback.MovePlayhead();
+            //animationPlayback.MovePlayhead();
         }
     }
     
